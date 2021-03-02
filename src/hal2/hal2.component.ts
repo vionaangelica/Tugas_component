@@ -9,17 +9,17 @@ import { GlobalVarService } from '../app/global-var.service';
 })
 export class Hal2Component implements OnInit {
 
-  ambilJudul = [];
-  ambilIsi = [];
-  ambilTanggal = [];
+  ambilJudul : String;
+  ambilIsi : String;
+  ambilTanggal : String;
   constructor(private route : ActivatedRoute, private router : Router, private globalvar : GlobalVarService) { 
       this.ambilJudul = this.globalvar.getDicari();
       this.ambilIsi = this.globalvar.getIsi(this.ambilJudul);
-      this.ambilTanggal = this.globalvar.getTanggal();
-
+      this.ambilTanggal = this.globalvar.getTanggal(this.ambilJudul);
   }
 
   ngOnInit() {
+      
   }
 
   Next(){

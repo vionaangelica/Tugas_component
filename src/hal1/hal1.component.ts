@@ -29,6 +29,6 @@ export class Hal1Component implements OnInit {
   }
   Halaman2(){
     this.globalvar.setDicari(this.cariJudul);
-    this.router.navigate(["/hal2"+this.cariJudul]);
+    this.router.navigate(["/hal2/"+this.cariJudul]);
   }
 }

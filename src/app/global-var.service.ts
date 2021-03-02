@@ -12,13 +12,23 @@ export class GlobalVarService {
   public getJudul(){
     return this.dataJudul;
   }
-  public getIsi(judul : String){
+
+  public getIndex(judul : String){
     var i : number = 0;
-    
-    return this.dataNotes;
+    for(i=0;i<this.count;i++){
+      if (this.dataJudul[i] == judul){
+        return i;
+      }
+    }
   }
-  public getTanggal(){
-    return this.dataTanggal;
+
+  public getIsi(judul : String){
+    var index = this.getIndex(judul);
+    return this.dataNotes[index];
+  }
+  public getTanggal(judul : String){
+    var index = this.getIndex(judul);
+    return this.dataTanggal[index];
   }
 
   public getCount(){

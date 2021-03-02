@@ -17,13 +17,13 @@ export class Hal2Component implements OnInit {
   ngOnInit() {
   }
 
-  Tampil(){
-      var i : number = 0;
-      for(i=0;i<=this.globalvar.getCount();i++){
-          {{this.globalvar.getJudul(i)}};
-          {{this.globalvar.getIsi(i)}};
-          {{this.globalvar.getTanggal(i)}};
-      }
-  }
+  // Tampil(){
+  //     var i : number = 0;
+  //     for(i=0;i<=this.globalvar.getCount();i++){
+  //         {{this.globalvar.getJudul(i)}};
+  //         {{this.globalvar.getIsi(i)}};
+  //         {{this.globalvar.getTanggal(i)}};
+  //     }
+  // }
 
 }

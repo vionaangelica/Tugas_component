@@ -14,7 +14,7 @@ export class GlobalVarService {
   public getIsi(){
     return this.dataNotes;
   }
-  public getTanggal(r){
+  public getTanggal(){
     return this.dataTanggal;
   }
 
@@ -30,10 +30,10 @@ export class GlobalVarService {
     this.dataJudul.push(judul);
   }
   public setIsi(isi : String){
-    this.dataJudul.push(isi);
+    this.dataNotes.push(isi);
   }
   public setTanggal(tgl : String){
-    this.dataJudul.push(tgl);
+    this.dataTanggal.push(tgl);
   }
 
 }

@@ -19,7 +19,7 @@ export class AppComponent  {
     this.globalvar.setJudul(this.inputJudul);
     this.globalvar.setIsi(this.isiText);
     this.globalvar.setTanggal(this.tanggal);
-    this.globalvar.incCount;
+    this.globalvar.incCount();
 
     this.router.navigate(["/hal2"]);
   }

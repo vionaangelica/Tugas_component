@@ -7,11 +7,16 @@ export class GlobalVarService {
   private dataTanggal = [];
   private judulFav = [];
   private judulDicari;
+  private countFav = 0;
   private count = 0;
 
   constructor() { }
   public getJudul(){
     return this.dataJudul;
+  }
+
+  public getFav(){
+    return this.judulFav;
   }
 
   public getIndex(judul : String){
@@ -36,12 +41,20 @@ export class GlobalVarService {
     return this.count;
   }
 
+  public getCountFav(){
+    return this.countFav;
+  }
+
   public getDicari(){
     return this.judulDicari;
   }
 
   public incCount(){
     this.count+=1;
+  }
+
+   public incCountFav(){
+    this.countFav+=1;
   }
 
   public setJudul(judul : String){

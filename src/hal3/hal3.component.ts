@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalVarService } from '../app/global-var.service';
 
 @Component({
   selector: 'app-hal3',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hal3.component.css']
 })
 export class Hal3Component implements OnInit {
-
-  constructor() { }
+  ambilFavorite = [];
+  constructor(private globalvar: GlobalVarService) { 
+    this.ambilFavorite = this.globalvar.getFav();
+  }
 
   ngOnInit() {
   }

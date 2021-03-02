@@ -28,7 +28,13 @@ export class Hal1Component implements OnInit {
     this.globalvar.incCount();
   }
   Halaman2(){
+    if(this.cariJudul.match(null)){
+      alert("Isi tidak boleh kosong")
+    }
+    else{
     this.globalvar.setDicari(this.cariJudul);
     this.router.navigate(["/hal2"]);
+    }
+   
   }
 }

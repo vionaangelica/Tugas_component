@@ -27,7 +27,6 @@ export class Hal2Component implements OnInit {
   ngOnInit() {}
 
   Favorite() {
-    if(this.ambilIsi!=""){
     this.countFav = this.globalvar.getCountFav();
     var i: number = 0;
     var cek: number = 0;
@@ -41,7 +40,6 @@ export class Hal2Component implements OnInit {
       this.globalvar.setFavorite(this.ambilJudul);
       alert("Selesai difavorite");
       this.globalvar.incCountFav();
-    }
     }
   }
 

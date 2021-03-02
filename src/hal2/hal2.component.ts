@@ -22,9 +22,11 @@ export class Hal2Component implements OnInit {
       
   }
 
-  Next(){
-    this.router.navigate(["/hal3"]);
+  Favorite(){
+    var i : number = 0;
+    
   }
+  
 
   // Tampil(){
   //     var i : number = 0;

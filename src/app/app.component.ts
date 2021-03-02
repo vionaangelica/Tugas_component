@@ -15,4 +15,7 @@ export class AppComponent  {
   Halaman1(){
     this.router.navigate(["/hal1"]);
   }
+  Halaman3(){
+    this.router.navigate(["/hal3"]);
+  }
 }

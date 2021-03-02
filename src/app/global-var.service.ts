@@ -5,6 +5,7 @@ export class GlobalVarService {
   private dataJudul = [];
   private dataNotes = [];
   private dataTanggal = [];
+  private judulFav = [];
   private judulDicari;
   private count = 0;
 
@@ -55,6 +56,10 @@ export class GlobalVarService {
 
   public setDicari(cari : String){
     this.judulDicari = cari;
+  }
+
+  public setFavorite(judul : String){
+    this.judulFav.push(judul);
   }
 
 }

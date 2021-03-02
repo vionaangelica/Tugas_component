@@ -1,5 +1,6 @@
 import { Component, VERSION } from '@angular/core';
 import { Router } from '@angular/router';
+import { GlobalVarService } from './global-var.service';
 
 @Component({
   selector: 'my-app',
@@ -9,12 +10,17 @@ import { Router } from '@angular/router';
 export class AppComponent  {
   name = 'Angular ' + VERSION.major;
 
-  constructor(private router : Router){}
+  constructor(private router : Router,  private globalvar : GlobalVarService){}
   inputJudul=""
   isiText=""
   tanggal=""
 
   halaman2(){
-    this.router.navigate(["/home/"+this.textNama]);
+    this.globalvar.setJudul(this.inputJudul);
+    this.globalvar.setIsi(this.isiText);
+    this.globalvar.setTanggal(this.tanggal);
+    this.globalvar.incCount;
+
+    this.router.navigate(["/hal2"]);
   }
 }

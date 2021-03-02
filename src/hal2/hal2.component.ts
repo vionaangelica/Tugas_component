@@ -9,9 +9,9 @@ import { GlobalVarService } from '../app/global-var.service';
 })
 export class Hal2Component implements OnInit {
 
-
+  ambilJudul = [];
   constructor(private route : ActivatedRoute, private globalvar : GlobalVarService) { 
-
+      this.ambilJudul = this.globalvar.getJudul();
   }
 
   ngOnInit() {
@@ -19,7 +19,11 @@ export class Hal2Component implements OnInit {
 
   Tampil(){
       var i : number = 0;
-      for(i=0;i<)
+      for(i=0;i<=this.globalvar.getCount();i++){
+          {{this.globalvar.getJudul(i)}};
+          {{this.globalvar.getIsi(i)}};
+          {{this.globalvar.getTanggal(i)}};
+      }
   }
 
 }

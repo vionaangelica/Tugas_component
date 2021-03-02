@@ -8,14 +8,14 @@ export class GlobalVarService {
   private count = 0;
 
   constructor() { }
-  public getJudul(index : number){
-    return this.dataJudul[index];
+  public getJudul(){
+    return this.dataJudul;
   }
-  public getIsi(index : number){
-    return this.dataNotes[index];
+  public getIsi(){
+    return this.dataNotes;
   }
-  public getTanggal(index : number){
-    return this.dataTanggal[index];
+  public getTanggal(r){
+    return this.dataTanggal;
   }
 
   public getCount(){

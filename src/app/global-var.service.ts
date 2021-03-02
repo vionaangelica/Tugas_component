@@ -5,13 +5,16 @@ export class GlobalVarService {
   private dataJudul = [];
   private dataNotes = [];
   private dataTanggal = [];
+  private judulDicari;
   private count = 0;
 
   constructor() { }
   public getJudul(){
     return this.dataJudul;
   }
-  public getIsi(){
+  public getIsi(judul : String){
+    var i : number = 0;
+    
     return this.dataNotes;
   }
   public getTanggal(){
@@ -20,6 +23,10 @@ export class GlobalVarService {
 
   public getCount(){
     return this.count;
+  }
+
+  public getDicari(){
+    return this.judulDicari;
   }
 
   public incCount(){
@@ -34,6 +41,10 @@ export class GlobalVarService {
   }
   public setTanggal(tgl : String){
     this.dataTanggal.push(tgl);
+  }
+
+  public setDicari(cari : String){
+    this.judulDicari = cari;
   }
 
 }

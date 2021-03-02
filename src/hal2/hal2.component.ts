@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { GlobalVarService } from '../app/global-var.service';
 
 @Component({
@@ -10,11 +10,20 @@ import { GlobalVarService } from '../app/global-var.service';
 export class Hal2Component implements OnInit {
 
   ambilJudul = [];
-  constructor(private route : ActivatedRoute, private globalvar : GlobalVarService) { 
-      this.ambilJudul = this.globalvar.getJudul();
+  ambilIsi = [];
+  ambilTanggal = [];
+  constructor(private route : ActivatedRoute, private router : Router, private globalvar : GlobalVarService) { 
+      this.ambilJudul = this.globalvar.getDicari();
+      this.ambilIsi = this.globalvar.getIsi(this.ambilJudul);
+      this.ambilTanggal = this.globalvar.getTanggal();
+
   }
 
   ngOnInit() {
+  }
+
+  Next(){
+    this.router.navigate(["/hal3"]);
   }
 
   // Tampil(){

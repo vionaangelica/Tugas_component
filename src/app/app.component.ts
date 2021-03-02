@@ -11,16 +11,8 @@ export class AppComponent  {
   name = 'Angular ' + VERSION.major;
 
   constructor(private router : Router,  private globalvar : GlobalVarService){}
-  inputJudul=""
-  isiText=""
-  tanggal=""
-
-  halaman2(){
-    this.globalvar.setJudul(this.inputJudul);
-    this.globalvar.setIsi(this.isiText);
-    this.globalvar.setTanggal(this.tanggal);
-    this.globalvar.incCount();
-
-    this.router.navigate(["/hal2"]);
+  
+  Halaman1(){
+    this.router.navigate(["/hal1"]);
   }
 }

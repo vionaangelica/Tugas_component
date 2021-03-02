@@ -1,0 +1,29 @@
+<p>
+Halaman 1 : Input Note
+  <br><br>
+  Input Judul <br>
+  <input type="text" [(ngModel)]="inputJudul"/>
+  <br>
+  Isi <br>
+  <input type="text" [(ngModel)]="isiText"/>
+  <br>
+  Tanggal <br>
+  <input type="text" [(ngModel)]="tanggal"/>
+  <br>
+  <button (click)="submit()">Submit</button>
+  <br>
+  <br>
+
+  Lihat Notes <br>
+  <span *ngFor="let judul of ambilJudul; let i = index">
+      {{this.judul}}
+      <!-- <a routerLink="/hal2">{{this.judul}}</a> -->
+      <br>
+  </span>
+  Input Judul yang ingin dicari : <br>
+  <input type="text" [(ngModel)]="cariJudul"/>
+  <button (click)="Halaman2()">Cari</button>
+  <br>
+  <br>
+
+</p>
